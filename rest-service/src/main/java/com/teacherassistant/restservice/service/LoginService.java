@@ -11,12 +11,12 @@ public class LoginService
 	{
 		boolean valid = true;
 		
-		if (login.getUsername() == null || login.getUsername() == "")
+		if (login.getUsername() == null || login.getUsername().equals(""))
 		{
 			valid = false;
 		}
 		
-		if (login.getPassword() == null || login.getPassword() == "")
+		if (login.getPassword() == null || login.getPassword().equals(""))
 		{
 			valid = false;
 		}
