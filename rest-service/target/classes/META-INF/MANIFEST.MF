@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: rest-service
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Tanner
+Implementation-Vendor-Id: com.teacherassistant
+Build-Jdk: 1.8.0_181
+Implementation-URL: https://spring.io/projects/spring-boot/rest-servic
+ e
+Created-By: Maven Integration for Eclipse
+
