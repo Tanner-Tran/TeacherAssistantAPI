@@ -1,5 +1,5 @@
 # TeacherAssistantAPI
-A RESTful API exposing all the necessary endpoints for the Teacher Assistant application:
+A RESTful API exposing endpoints associated with the base Teacher Assistant application:
 
 Validate login: PUT (/login)
 {
