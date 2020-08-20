@@ -30,3 +30,9 @@ Get all courses of a teacher: GET (/courses?username=someUsername)
     ]
 }
 
+Create new course for a teacher: PUT (/createCourse?username=someUsername)
+{
+  "title" : "someCourseTitle",
+  "code" : "someCourseCode"
+}
+
