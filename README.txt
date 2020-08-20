@@ -36,3 +36,5 @@ Create new course for a teacher: PUT (/createCourse?username=someUsername)
   "code" : "someCourseCode"
 }
 
+Delete a course of a teacher: DELETE (deleteCourse?username=someUsername&courseCode=someCourseCode)
+
