@@ -15,7 +15,7 @@ import com.teacherassistant.restservice.service.CreateUserService;
 public class CreateUserController
 {
 	@PutMapping("/createUser")
-	public ResponseEntity<String> validateLogin(@RequestBody User user) throws SQLException
+	public ResponseEntity<String> createUser(@RequestBody User user) throws SQLException
 	{
 		HttpStatus status;
 		

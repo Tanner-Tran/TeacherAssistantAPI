@@ -8,7 +8,7 @@ import java.util.List;
 import com.teacherassistant.restservice.dao.Database;
 import com.teacherassistant.restservice.model.Course;
 
-public class CoursesHandlerService 
+public class GetCoursesService 
 {
 	public static boolean validateInput(String teacher) throws SQLException
 	{
