@@ -14,3 +14,19 @@ Create new user: PUT (/createUser)
   "username" : "someUsername",
   "password" : "somePassword"
 }
+
+Get all courses of a teacher: GET (/courses?username=someUsername)
+{
+    "courseList": 
+    [
+        {
+            "title": "Art101",
+            "code": "1234"
+        },
+        {
+            "title": "Biology 101",
+            "code": "7890"
+        }
+    ]
+}
+
