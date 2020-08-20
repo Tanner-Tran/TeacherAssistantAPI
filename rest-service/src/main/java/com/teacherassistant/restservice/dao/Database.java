@@ -284,28 +284,17 @@ public class Database
 		statement.execute();
 	}
 	
-	public static String[] getCourses(String teacher) throws SQLException
-	{
-		ArrayList<String> list = new ArrayList<>();
-		
-		String query = "SELECT code from COURSE where teacher = ?";
+	public static ResultSet getCourses(String teacher) throws SQLException
+	{	
+		String query = "SELECT * from COURSE where teacher = ?";
 		
 		PreparedStatement statement = conn.prepareStatement(query);
 		
 		statement.setString(1, teacher);
 		
-		ResultSet rs = statement.executeQuery();
-		
-		while(rs.next())
-		{
-			list.add(rs.getString("code"));
-		}
-		
-		String[] array = list.toArray(new String[list.size()]);
-		
-		return array;
+		return statement.executeQuery();
 	}
-	
+		
 	public static void addStudent(String lastName, String firstName, String studentID, String classCode, String teacher) throws SQLException
 	{
 		String query = "insert into STUDENT values (?, ?, ?, ?, ?)";
