@@ -14,11 +14,11 @@ import com.teacherassistant.restservice.service.CoursesHandlerService;
 public class CoursesController 
 {
 	@GetMapping("/courses")
-	public ResponseEntity<CourseList> getCourses(@RequestParam(value = "teacher") String teacher) throws SQLException
+	public ResponseEntity<CourseList> getCourses(@RequestParam(value = "username") String username) throws SQLException
 	{
-		if (CoursesHandlerService.validateInput(teacher))
+		if (CoursesHandlerService.validateInput(username))
 		{
-			CourseList list = new CourseList(CoursesHandlerService.getCourses(teacher));
+			CourseList list = new CourseList(CoursesHandlerService.getCourses(username));
 			
 			return new ResponseEntity<CourseList>(list, HttpStatus.OK);
 		}
