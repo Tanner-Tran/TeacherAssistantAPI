@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import com.teacherassistant.restservice.model.Course;
+
+import com.teacherassistant.restservice.dto.Course;
 import com.teacherassistant.restservice.service.CreateCourseService;
 
 @RestController

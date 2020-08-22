@@ -1,4 +1,4 @@
-package com.teacherassistant.restservice.model;
+package com.teacherassistant.restservice.dto;
 
 public class User 
 {

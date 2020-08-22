@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.teacherassistant.restservice.dao.Database;
-import com.teacherassistant.restservice.model.Course;
+import com.teacherassistant.restservice.dto.Course;
 
 public class GetCoursesService 
 {

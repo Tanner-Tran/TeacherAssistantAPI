@@ -3,7 +3,7 @@ package com.teacherassistant.restservice.service;
 import java.sql.SQLException;
 
 import com.teacherassistant.restservice.dao.Database;
-import com.teacherassistant.restservice.model.Course;
+import com.teacherassistant.restservice.dto.Course;
 
 public class CreateCourseService 
 {
