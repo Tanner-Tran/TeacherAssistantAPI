@@ -14,7 +14,7 @@ public class GetCoursesService
 	{
 		boolean valid = true;
 		
-		if (teacher.equals("") || teacher == null || Database.checkIfUsernameAvailable(teacher))
+		if (teacher.equals("") || teacher == null || Database.checkIfUsernameAvailable(teacher)) // In practice, this should never happen since the username will be taken from a cookie
 		{
 			valid = false;
 		}

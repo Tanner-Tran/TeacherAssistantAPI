@@ -17,7 +17,7 @@ public class GetCoursesController
 	@GetMapping("/courses")
 	public ResponseEntity<CourseList> getCourses(@RequestParam(value = "username") String username) throws SQLException
 	{
-		if (GetCoursesService.validateInput(username))
+		if (GetCoursesService.validateInput(username)) 
 		{
 			CourseList list = new CourseList(GetCoursesService.getCourses(username));
 			
@@ -25,7 +25,7 @@ public class GetCoursesController
 		}
 		else
 		{
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build(); // In practice, this should never happen as the username will be fetched from the user's cookies
 		}
 	}
 }

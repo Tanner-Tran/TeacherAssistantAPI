@@ -25,6 +25,7 @@ public class CreateCourseController
 			if (CreateCourseService.checkIfUsernameAvailable(username))
 			{
 				status = HttpStatus.NOT_FOUND;
+				return new ResponseEntity<>("Given username does not exist", status); // In practice, this should never happen as the username will be fetched from the user's cookies
 			}
 			else
 			{
