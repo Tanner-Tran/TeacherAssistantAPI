@@ -27,8 +27,8 @@ public class DeleteCourseController
 			if (DeleteCourseService.checkIfCourseCodeAvailable(courseCode, username))
 			{
 				status = HttpStatus.NOT_FOUND;
-				return new ResponseEntity<>("Given course code does not exist for given username", status);
-			}
+				return new ResponseEntity<>("Given course code does not exist for given username", status); // In practice, this should never happen as the courseCode will be selected 
+			}                                                                                               // by the user from a combobox of their courses
 			else
 			{
 				status = HttpStatus.OK;

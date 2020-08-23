@@ -44,7 +44,7 @@ public class CreateCourseController
 		}
 		else
 		{
-			status = HttpStatus.BAD_REQUEST;
+			status = HttpStatus.BAD_REQUEST; // In practice, this should never happen as the username will be fetched from the user's cookies
 		}
 		
 		return ResponseEntity.status(status).build();
