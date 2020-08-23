@@ -35,7 +35,7 @@ public class CreateUserController
 		}
 		else
 		{
-			status = HttpStatus.BAD_REQUEST;
+			status = HttpStatus.BAD_REQUEST; // Will only happen if one of the fields supplied was empty/null 
 		}
 		
 		return ResponseEntity.status(status).build();
