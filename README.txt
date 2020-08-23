@@ -15,6 +15,12 @@ Create new user: PUT (/createUser)
   "password" : "somePassword"
 }
 
+Delete user: DELETE (/deleteUser)
+{
+  "username" : "someUsername",
+  "password" : "somePassword"
+}
+
 Get all courses of a teacher: GET (/courses?username=someUsername)
 {
     "courseList": 
