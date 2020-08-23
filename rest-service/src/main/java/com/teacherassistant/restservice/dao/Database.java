@@ -8,6 +8,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
+
+import com.teacherassistant.restservice.dto.Student;
 
 public class Database 
 {
@@ -362,9 +365,9 @@ public class Database
 		return result;
 	}
 	
-	public static String[] getStudents(String classCode, String teacher) throws SQLException
+	public static List<Student> getStudents(String classCode, String teacher) throws SQLException
 	{
-		ArrayList<String> list = new ArrayList<>();
+		ArrayList<Student> list = new ArrayList<>();
 		
 		String query = "SELECT lastName, firstName, StudentID from STUDENT where teacher = ? and classCode = ?";
 		
@@ -377,20 +380,15 @@ public class Database
 		
 		while (rs.next())
 		{
-			String result = "";
-			result += rs.getString("firstName");
-			result += " ";
-			result += rs.getString("lastName");
-			result += " (";
-			result += rs.getString("studentID");
-			result += ")";
+			String firstName = rs.getString("firstName");
+			String lastName = rs.getString("lastName");
+			String studentID = rs.getString("studentID");
 			
+			Student result = new Student(lastName, firstName, studentID);
 			list.add(result);
 		}
 		
-		String[] array = list.toArray(new String[list.size()]);
-		
-		return array;
+		return list;
 	}
 	
 	public static void addAttendanceDate(String classCode, String teacher, java.sql.Date attDate) throws SQLException
